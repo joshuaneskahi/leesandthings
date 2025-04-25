@@ -10,7 +10,7 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #222; /* Dark gray */
+            background-color: #222;
             color: #fff;
             display: flex;
             flex-direction: column;
@@ -19,23 +19,23 @@
         }
 
         header {
-            background-color: #333; /* Dark gray */
-            color: #00bfff; /* Blue */
+            background-color: #333;
+            color: #00bfff;
             padding: 40px 20px;
             text-align: center;
-            font-size: 4em; /* Increased font size for proportionality */
+            font-size: 4em;
             width: 100%;
         }
 
         nav {
-            background-color: #444; /* Slightly lighter gray */
+            background-color: #444;
             padding: 10px;
             text-align: center;
             width: 100%;
         }
 
         nav a {
-            color: #00bfff; /* Blue */
+            color: #00bfff;
             text-decoration: none;
             margin: 0 20px;
             font-weight: bold;
@@ -43,7 +43,7 @@
         }
 
         nav a:hover {
-            color: #007f9b; /* Darker blue */
+            color: #007f9b;
         }
 
         .hero {
@@ -70,12 +70,12 @@
             display: flex;
             justify-content: space-around;
             padding: 50px 20px;
-            background-color: #333; /* Dark gray */
+            background-color: #333;
             width: 100%;
         }
 
         .service {
-            background-color: #555; /* Medium gray */
+            background-color: #555;
             padding: 20px;
             width: 30%;
             border-radius: 8px;
@@ -83,53 +83,11 @@
         }
 
         .service h3 {
-            color: #00bfff; /* Blue */
+            color: #00bfff;
         }
 
         .service p {
             font-size: 1.1em;
-        }
-
-        .contact {
-            background-color: #222; /* Dark gray */
-            padding: 50px;
-            text-align: center;
-            width: 100%;
-        }
-
-        .contact h2 {
-            color: #00bfff; /* Blue */
-        }
-
-        footer {
-            background-color: #111; /* Black */
-            color: #777; /* Light gray */
-            text-align: center;
-            padding: 20px;
-            width: 100%;
-        }
-
-        footer a {
-            color: #00bfff; /* Blue */
-            text-decoration: none;
-        }
-
-        footer a:hover {
-            color: #fff;
-        }
-
-        .cta-button {
-            background-color: #00bfff; /* Blue */
-            color: #222; /* Dark gray */
-            padding: 15px 30px;
-            font-size: 1.2em;
-            text-decoration: none;
-            border-radius: 5px;
-            margin-top: 20px;
-        }
-
-        .cta-button:hover {
-            background-color: #007f9b; /* Darker blue */
         }
 
         .gallery {
@@ -148,50 +106,105 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
 
-        /* Contact Form Styles */
-        .contact-form {
-            background-color: #444; /* Dark gray */
-            padding: 30px;
-            border-radius: 8px;
-            max-width: 600px;
-            margin: 0 auto;
-            text-align: left;
+        .contact {
+            background-color: #222;
+            padding: 50px;
+            text-align: center;
             width: 100%;
+        }
+
+        footer {
+            background-color: #111;
+            color: #777;
+            text-align: center;
+            padding: 20px;
+            width: 100%;
+        }
+
+        footer a {
+            color: #00bfff;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            color: #fff;
+        }
+
+        .cta-button {
+            background-color: #00bfff;
+            color: #222;
+            padding: 15px 30px;
+            font-size: 1.2em;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+
+        .cta-button:hover {
+            background-color: #007f9b;
+        }
+
+        /* Sleek Modern Contact Form Styles */
+        .contact-form {
+            background: rgba(68, 68, 68, 0.95);
+            padding: 40px;
+            border-radius: 16px;
+            max-width: 600px;
+            margin: 50px auto;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(10px);
+            color: #fff;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .contact-form h2 {
+            color: #00bfff;
+            margin-bottom: 30px;
+            font-size: 2em;
+            text-align: center;
         }
 
         .contact-form input,
         .contact-form textarea {
             width: 100%;
-            padding: 12px;
+            padding: 14px 18px;
             margin-bottom: 20px;
-            border-radius: 5px;
-            border: none;
-            background-color: #555;
+            border-radius: 10px;
+            border: 1px solid #00bfff;
+            background-color: #333;
             color: #fff;
             font-size: 1em;
+            transition: border 0.3s, box-shadow 0.3s;
+        }
+
+        .contact-form input:focus,
+        .contact-form textarea:focus {
+            border-color: #007f9b;
+            outline: none;
+            box-shadow: 0 0 8px rgba(0, 191, 255, 0.5);
         }
 
         .contact-form textarea {
-            height: 150px;
+            resize: vertical;
+            min-height: 150px;
         }
 
         .contact-form button {
-            background-color: #00bfff; /* Blue */
-            color: #222; /* Dark gray */
-            padding: 15px 30px;
-            font-size: 1.2em;
-            text-decoration: none;
-            border-radius: 5px;
+            background: linear-gradient(to right, #00bfff, #007f9b);
+            color: #fff;
+            padding: 14px 30px;
+            font-size: 1.1em;
+            border-radius: 8px;
             border: none;
             cursor: pointer;
             display: block;
-            margin: 0 auto; /* Center the button */
+            margin: 0 auto;
+            transition: background 0.3s ease-in-out;
         }
 
         .contact-form button:hover {
-            background-color: #007f9b; /* Darker blue */
+            background: linear-gradient(to right, #009ac7, #005e72);
         }
-
     </style>
 </head>
 <body>
