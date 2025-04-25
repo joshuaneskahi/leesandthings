@@ -1,0 +1,111 @@
+import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Wrench, Hammer, Truck, Camera } from "lucide-react";
+import { motion } from "framer-motion";
+
+export default function LeesAndThings() {
+  return (
+    <main className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-gray-700 text-gray-300 p-8">
+      <header className="text-center mb-12">
+        <motion.h1
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="text-5xl font-bold text-gray-400"
+        >
+          Lee's & Things
+        </motion.h1>
+        <p className="text-gray-500 mt-2 text-lg">
+          Mechanic • Handyman • Jack of All Trades
+        </p>
+      </header>
+
+      <section className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <Card className="bg-gray-900 border border-gray-700 rounded-2xl shadow-lg">
+          <CardContent className="flex flex-col items-center p-6">
+            <Wrench size={48} className="text-gray-500 mb-4" />
+            <h2 className="text-2xl font-semibold mb-2">Mechanic Services</h2>
+            <p className="text-gray-400 text-center">
+              From oil changes to full engine diagnostics, Lee's got you covered.
+            </p>
+          </CardContent>
+        </Card>
+
+        <Card className="bg-gray-900 border border-gray-700 rounded-2xl shadow-lg">
+          <CardContent className="flex flex-col items-center p-6">
+            <Hammer size={48} className="text-gray-500 mb-4" />
+            <h2 className="text-2xl font-semibold mb-2">Handyman Work</h2>
+            <p className="text-gray-400 text-center">
+              Repairs, installations, odd jobs—no task too small or too big.
+            </p>
+          </CardContent>
+        </Card>
+
+        <Card className="bg-gray-900 border border-gray-700 rounded-2xl shadow-lg">
+          <CardContent className="flex flex-col items-center p-6">
+            <Truck size={48} className="text-gray-500 mb-4" />
+            <h2 className="text-2xl font-semibold mb-2">Other Services</h2>
+            <p className="text-gray-400 text-center">
+              Need help with something else? Lee can probably handle it.
+            </p>
+          </CardContent>
+        </Card>
+      </section>
+
+      <section className="my-16">
+        <h2 className="text-3xl text-center text-gray-400 font-bold mb-8">Photo Gallery</h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+          {[
+            "https://cdn.pixabay.com/photo/2020/10/08/14/10/man-5638082_640.jpg",
+            "https://st4.depositphotos.com/12982378/22802/i/450/depositphotos_228020620-stock-photo-cropped-shot-auto-mechanic-rag.jpg",
+            "https://www.nextinsurance.com/wp-content/uploads/2022/01/jan-2022-19-802x454.jpg",
+            "https://www.upflip.com/wp-content/uploads/2024/09/Handyman-with-tools.jpg",
+            "https://www.bobvila.com/wp-content/uploads/2023/12/What-Does-a-Handyman-Do-1.jpg?strip=all&quality=85",
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQHHitg6jE5vWZdCornzUuoNjM8s-dUkd3VLw&s"
+          ].map((src, index) => (
+            <div key={index} className="rounded-xl overflow-hidden border border-gray-700">
+              <img
+                src={src}
+                alt={`Project ${index + 1}`}
+                className="w-full h-48 object-cover"
+              />
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section className="my-16 max-w-xl mx-auto">
+        <h2 className="text-3xl text-center text-gray-400 font-bold mb-8">Contact Lee</h2>
+        <form className="flex flex-col gap-4 bg-gray-900 p-6 rounded-2xl shadow-md border border-gray-700">
+          <input
+            type="text"
+            placeholder="Your Name"
+            className="p-3 rounded-md bg-black text-gray-300 border border-gray-700 focus:outline-none"
+          />
+          <input
+            type="email"
+            placeholder="Your Email"
+            className="p-3 rounded-md bg-black text-gray-300 border border-gray-700 focus:outline-none"
+          />
+          <input
+            type="tel"
+            placeholder="Your Phone Number"
+            className="p-3 rounded-md bg-black text-gray-300 border border-gray-700 focus:outline-none"
+          />
+          <textarea
+            rows={5}
+            placeholder="Scope of project or message"
+            className="p-3 rounded-md bg-black text-gray-300 border border-gray-700 focus:outline-none"
+          ></textarea>
+          <Button type="submit" className="bg-gray-700 hover:bg-gray-600 text-gray-200 font-bold py-2 px-4 rounded">
+            Send Message
+          </Button>
+        </form>
+      </section>
+
+      <footer className="mt-16 text-center text-gray-500">
+        <p>© 2025 Lee's & Things. All rights reserved.</p>
+      </footer>
+    </main>
+  );
+}
