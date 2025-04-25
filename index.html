@@ -32,15 +32,20 @@
             background-color: #10121A; /* Dark blue from the logo */
             color: #fff; /* White text for contrast */
             padding: 40px 20px;
-            text-align: center;
-            font-size: 4em;
-            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             width: 100%;
         }
 
         header img {
-            height: 100px; /* Adjust logo size */
-            margin-bottom: 10px;
+            height: 200px; /* Increased logo size */
+            margin-right: 20px; /* Space between logo and text */
+        }
+
+        header h1 {
+            font-size: 3em; /* Adjusted size of the header text */
+            font-weight: bold;
         }
 
         nav {
@@ -107,15 +112,34 @@
             font-size: 1.1em;
         }
 
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            padding: 50px 20px;
+            background-color: #333; /* Medium gray */
+            width: 100%;
+            gap: 20px;
+        }
+
+        .gallery img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            gap: 20px;
+        }
+
         .contact {
             background-color: #222; /* Dark gray */
-            padding: 50px;
+            padding: 50px 20px;
             text-align: center;
             width: 100%;
         }
 
         .contact h2 {
             color: #FF9A3D; /* Orange accent */
+            text-align: center; /* Center the text */
         }
 
         footer {
@@ -149,30 +173,15 @@
             background-color: #FF7B00; /* Darker orange on hover */
         }
 
-        .gallery {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
-            padding: 50px 20px;
-            background-color: #333; /* Medium gray */
-            width: 100%;
-        }
-
-        .gallery img {
-            width: 100%;
-            height: auto;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        }
-
         /* Contact Form Styles */
         .contact-form {
             background-color: #444; /* Dark gray */
+            color: #FF7B00;
             padding: 30px;
             border-radius: 8px;
             max-width: 600px;
             margin: 0 auto;
-            text-align: left;
+            text-align: center;
             width: 100%;
         }
 
@@ -214,7 +223,7 @@
 
     <header>
         <img src="https://raw.githubusercontent.com/joshuaneskahi/leesandthings/e332a6bb210a3ea23c4c47ee0a176cb7ddc961f6/ChatGPT%20Image%20Apr%2024%2C%202025%2C%2009_54_03%20PM.png" alt="Lee's & Things Logo">
-        Lee's & Things
+        <h1>Lee's & Things</h1>
     </header>
 
     <nav>
