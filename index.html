@@ -121,6 +121,63 @@
         .cta-button:hover {
             background-color: #007f9b; /* Darker blue */
         }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            padding: 50px 20px;
+            background-color: #333;
+        }
+
+        .gallery img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Contact Form Styles */
+        .contact-form {
+            background-color: #444; /* Dark gray */
+            padding: 30px;
+            border-radius: 8px;
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: left;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            border: none;
+            background-color: #555;
+            color: #fff;
+            font-size: 1em;
+        }
+
+        .contact-form textarea {
+            height: 150px;
+        }
+
+        .contact-form button {
+            background-color: #00bfff; /* Blue */
+            color: #222; /* Dark gray */
+            padding: 15px 30px;
+            font-size: 1.2em;
+            text-decoration: none;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .contact-form button:hover {
+            background-color: #007f9b; /* Darker blue */
+        }
+
     </style>
 </head>
 <body>
@@ -155,10 +212,30 @@
         </div>
     </section>
 
+    <section id="gallery" class="gallery">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRT2tCQRATtOeIohk_X6SatarmuWRZV_hG7lg&s" alt="Service Image 1">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnZe-hchZqchklRY-zjmHQ6z2DQVi3DSaH2Q&s" alt="Service Image 2">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRS-ZiqDObhaQaGznGJoSymK73SjDVg6df9TQ&s" alt="Service Image 3">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHYANXBnmG7T1kTd56GP2Rb5pHYZfFPk9q1A&s" alt="Service Image 4">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRV2cWYC29ZEn7FLxafvnqqgfsZHwyQwJJV9Q&s" alt="Service Image 5">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQAB25nyzI2E7Ce1pDvqQI5XOq_h0aJLqAagQ&s" alt="Service Image 6">
+    </section>
+
     <section id="contact" class="contact">
         <h2>Contact Us Today</h2>
         <p>Reach out for quotes, questions, or to book a service.</p>
         <a href="mailto:leesandthings@example.com" class="cta-button">Email Us</a>
+    </section>
+
+    <section id="contact-form" class="contact-form">
+        <h2>Contact Form</h2>
+        <form action="#" method="POST">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <input type="tel" name="phone" placeholder="Your Phone Number" required>
+            <textarea name="message" placeholder="Scope of work or message" required></textarea>
+            <button type="submit">Submit</button>
+        </form>
     </section>
 
     <footer>
