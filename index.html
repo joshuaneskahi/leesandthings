@@ -8,6 +8,13 @@
     <!-- Link to Google Font (Poppins) -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
+        /* Box-Sizing and Reset */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
         /* General Styles */
         body {
             font-family: 'Poppins', sans-serif; /* Applying Poppins font */
@@ -29,6 +36,11 @@
             font-size: 4em;
             font-weight: bold;
             width: 100%;
+        }
+
+        header img {
+            height: 100px; /* Adjust logo size */
+            margin-bottom: 10px;
         }
 
         nav {
@@ -76,6 +88,7 @@
             padding: 50px 20px;
             background-color: #10121A; /* Dark blue */
             width: 100%;
+            gap: 20px;
         }
 
         .service {
@@ -200,7 +213,7 @@
 <body>
 
     <header>
-        <img src="https://your-image-host.com/logo.png" alt="Lee's & Things Logo" style="height: 100px;">
+        <img src="https://raw.githubusercontent.com/joshuaneskahi/leesandthings/e332a6bb210a3ea23c4c47ee0a176cb7ddc961f6/ChatGPT%20Image%20Apr%2024%2C%202025%2C%2009_54_03%20PM.png" alt="Lee's & Things Logo">
         Lee's & Things
     </header>
 
@@ -248,4 +261,12 @@
             <textarea name="message" placeholder="Scope of work or message" required></textarea>
             <button type="submit">Submit</button>
         </form>
-    </section
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Lee's & Things. All rights reserved.</p>
+        <p>Follow us on <a href="#">Facebook</a> | <a href="#">Instagram</a></p>
+    </footer>
+
+</body>
+</html>
