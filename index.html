@@ -1,271 +1,251 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="Lee's & Things - Your go-to mechanic, handyman, and jack-of-all-trades service."/>
-  <title>Lee's & Things</title>
-  <style>
-    *, *::before, *::after {
-      box-sizing: border-box;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Lee's & Things - Your go-to mechanic, handyman, and jack-of-all-trades service.">
+    <title>Lee's & Things</title>
+    <!-- Link to Google Font (Poppins) -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Poppins', sans-serif; /* Applying Poppins font */
+            margin: 0;
+            padding: 0;
+            background-color: #1E1E2F; /* Dark blue-gray background */
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+        }
 
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #222;
-      color: #fff;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
+        header {
+            background-color: #10121A; /* Dark blue from the logo */
+            color: #fff; /* White text for contrast */
+            padding: 40px 20px;
+            text-align: center;
+            font-size: 4em;
+            font-weight: bold;
+            width: 100%;
+        }
 
-    header {
-      background-color: #333;
-      color: #fff;
-      font-weight: bold;
-      padding: 40px 20px;
-      text-align: center;
-      font-size: 4em;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 20px;
-      width: 100%;
-    }
+        nav {
+            background-color: #10121A; /* Dark blue */
+            padding: 10px;
+            text-align: center;
+            width: 100%;
+        }
 
-    header img {
-      max-width: 240px; /* Adjust logo size */
-      height: auto;
-    }
+        nav a {
+            color: #FF9A3D; /* Orange accent */
+            text-decoration: none;
+            margin: 0 20px;
+            font-weight: bold;
+            font-size: 1.2em;
+        }
 
-    nav {
-      background-color: #444;
-      padding: 10px;
-      text-align: center;
-      width: 100%;
-    }
+        nav a:hover {
+            color: #FF7B00; /* Darker orange for hover effect */
+        }
 
-    nav a {
-      color: #00bfff;
-      text-decoration: none;
-      margin: 0 20px;
-      font-weight: bold;
-      font-size: 1.2em;
-    }
+        .hero {
+            background-image: url('https://via.placeholder.com/1600x600/444444/ffffff?text=Lee%27s+%26+Things');
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+            text-align: center;
+            padding: 150px 0;
+            width: 100%;
+        }
 
-    nav a:hover {
-      color: #007f9b;
-    }
+        .hero h1 {
+            font-size: 4em;
+            margin: 0;
+        }
 
-    .hero {
-      background-image: url('https://via.placeholder.com/1600x600/444444/ffffff?text=Lee%27s+%26+Things');
-      background-size: cover;
-      background-position: center;
-      color: #fff;
-      text-align: center;
-      padding: 150px 20px;
-      width: 100%;
-    }
+        .hero p {
+            font-size: 1.5em;
+            margin-top: 20px;
+        }
 
-    .hero h1 {
-      font-size: 4em;
-      margin: 0;
-    }
+        .services {
+            display: flex;
+            justify-content: space-around;
+            padding: 50px 20px;
+            background-color: #10121A; /* Dark blue */
+            width: 100%;
+        }
 
-    .hero p {
-      font-size: 1.5em;
-      margin-top: 20px;
-    }
+        .service {
+            background-color: #222; /* Dark gray background for services */
+            padding: 20px;
+            width: 30%;
+            border-radius: 8px;
+            text-align: center;
+        }
 
-    .services {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 20px;
-      padding: 50px 20px;
-      background-color: #333;
-      width: 100%;
-    }
+        .service h3 {
+            color: #FF9A3D; /* Orange accent for headers */
+        }
 
-    .service {
-      background-color: #555;
-      padding: 20px;
-      width: 300px;
-      border-radius: 8px;
-      text-align: center;
-    }
+        .service p {
+            font-size: 1.1em;
+        }
 
-    .service h3 {
-      color: #00bfff;
-    }
+        .contact {
+            background-color: #222; /* Dark gray */
+            padding: 50px;
+            text-align: center;
+            width: 100%;
+        }
 
-    .service p {
-      font-size: 1.1em;
-    }
+        .contact h2 {
+            color: #FF9A3D; /* Orange accent */
+        }
 
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      grid-template-rows: repeat(2, auto);
-      gap: 20px;
-      padding: 50px 20px;
-      background-color: #333;
-      width: 100%;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
+        footer {
+            background-color: #10121A; /* Dark blue */
+            color: #777; /* Light gray for footer text */
+            text-align: center;
+            padding: 20px;
+            width: 100%;
+        }
 
-    .gallery img {
-      width: 100%;
-      height: auto;
-      border-radius: 8px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    }
+        footer a {
+            color: #FF9A3D; /* Orange accent */
+            text-decoration: none;
+        }
 
-    .contact {
-      background-color: #222;
-      padding: 50px 20px;
-      width: 100%;
-      text-align: center;
-    }
+        footer a:hover {
+            color: #FF7B00; /* Darker orange on hover */
+        }
 
-    .contact h2 {
-      color: #00bfff;
-      font-size: 2.5em;
-      margin-bottom: 30px;
-    }
+        .cta-button {
+            background-color: #FF9A3D; /* Orange button */
+            color: #10121A; /* Dark blue text */
+            padding: 15px 30px;
+            font-size: 1.2em;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
 
-    .contact-form {
-      background-color: #444;
-      padding: 40px;
-      border-radius: 10px;
-      max-width: 600px;
-      margin: 0 auto;
-      text-align: left;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.3);
-    }
+        .cta-button:hover {
+            background-color: #FF7B00; /* Darker orange on hover */
+        }
 
-    .contact-form input,
-    .contact-form textarea {
-      width: 100%;
-      padding: 14px;
-      margin-bottom: 20px;
-      border-radius: 6px;
-      border: none;
-      background-color: #555;
-      color: #fff;
-      font-size: 1em;
-      transition: background-color 0.3s;
-    }
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            padding: 50px 20px;
+            background-color: #333; /* Medium gray */
+            width: 100%;
+        }
 
-    .contact-form input:focus,
-    .contact-form textarea:focus {
-      background-color: #666;
-      outline: none;
-    }
+        .gallery img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
 
-    .contact-form textarea {
-      height: 150px;
-      resize: vertical;
-    }
+        /* Contact Form Styles */
+        .contact-form {
+            background-color: #444; /* Dark gray */
+            padding: 30px;
+            border-radius: 8px;
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: left;
+            width: 100%;
+        }
 
-    .contact-form button {
-      background-color: #00bfff;
-      color: #222;
-      padding: 15px 30px;
-      font-size: 1.1em;
-      border-radius: 6px;
-      border: none;
-      cursor: pointer;
-      transition: background-color 0.3s;
-      display: block;
-      width: 100%;
-    }
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            border: none;
+            background-color: #555;
+            color: #fff;
+            font-size: 1em;
+        }
 
-    .contact-form button:hover {
-      background-color: #007f9b;
-    }
+        .contact-form textarea {
+            height: 150px;
+        }
 
-    footer {
-      background-color: #111;
-      color: #777;
-      text-align: center;
-      padding: 20px;
-      width: 100%;
-    }
+        .contact-form button {
+            background-color: #FF9A3D; /* Orange button */
+            color: #10121A; /* Dark blue text */
+            padding: 15px 30px;
+            font-size: 1.2em;
+            text-decoration: none;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+            display: block;
+            margin: 0 auto;
+        }
 
-    footer a {
-      color: #00bfff;
-      text-decoration: none;
-    }
-
-    footer a:hover {
-      color: #fff;
-    }
-  </style>
+        .contact-form button:hover {
+            background-color: #FF7B00; /* Darker orange on hover */
+        }
+    </style>
 </head>
 <body>
 
-  <header>
-    <!-- Logo Image -->
-    <img src="https://raw.githubusercontent.com/joshuaneskahi/leesandthings/e332a6bb210a3ea23c4c47ee0a176cb7ddc961f6/ChatGPT%20Image%20Apr%2024%2C%202025%2C%2009_54_03%20PM.png">
-    Lee's & Things
-  </header>
+    <header>
+        <img src="https://your-image-host.com/logo.png" alt="Lee's & Things Logo" style="height: 100px;">
+        Lee's & Things
+    </header>
 
-  <nav>
-    <a href="#services">Services</a>
-    <a href="#contact">Contact</a>
-    <a href="#about">About</a>
-  </nav>
+    <nav>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+        <a href="#about">About</a>
+    </nav>
 
-  <div class="hero">
-    <h1>Reliable Service, Every Time</h1>
-    <p>Mechanic, Handyman, Jack of All Trades - Lee's & Things Has You Covered</p>
-  </div>
-
-  <section id="services" class="services">
-    <div class="service">
-      <h3>Mechanic Services</h3>
-      <p>From engine repair to routine maintenance, we get your car running smoothly.</p>
+    <div class="hero">
+        <h1>Reliable Service, Every Time</h1>
+        <p>Mechanic, Handyman, Jack of All Trades - Lee's & Things Has You Covered</p>
     </div>
-    <div class="service">
-      <h3>Handyman Services</h3>
-      <p>Fixing leaks, hanging shelves, or assembling furniture—no job too small!</p>
-    </div>
-    <div class="service">
-      <h3>General Maintenance</h3>
-      <p>Need repairs or upgrades around your home or office? We've got you covered.</p>
-    </div>
-  </section>
 
-  <section id="gallery" class="gallery">
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRT2tCQRATtOeIohk_X6SatarmuWRZV_hG7lg&s" alt="Service Image 1">
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnZe-hchZqchklRY-zjmHQ6z2DQVi3DSaH2Q&s" alt="Service Image 2">
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRS-ZiqDObhaQaGznGJoSymK73SjDVg6df9TQ&s" alt="Service Image 3">
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHYANXBnmG7T1kTd56GP2Rb5pHYZfFPk9q1A&s" alt="Service Image 4">
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRV2cWYC29ZEn7FLxafvnqqgfsZHwyQwJJV9Q&s" alt="Service Image 5">
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQAB25nyzI2E7Ce1pDvqQI5XOq_h0aJLqAagQ&s" alt="Service Image 6">
-  </section>
+    <section id="services" class="services">
+        <div class="service">
+            <h3>Mechanic Services</h3>
+            <p>From engine repair to routine maintenance, we get your car running smoothly.</p>
+        </div>
+        <div class="service">
+            <h3>Handyman Services</h3>
+            <p>Fixing leaks, hanging shelves, or assembling furniture—no job too small!</p>
+        </div>
+        <div class="service">
+            <h3>General Maintenance</h3>
+            <p>Need repairs or upgrades around your home or office? We've got you covered.</p>
+        </div>
+    </section>
 
-  <section id="contact" class="contact">
-    <h2>Contact Us Today</h2>
-    <div class="contact-form">
-      <form action="#" method="POST">
-        <input type="text" name="name" placeholder="Your Name" required />
-        <input type="email" name="email" placeholder="Your Email" required />
-        <input type="tel" name="phone" placeholder="Your Phone Number" required />
-        <textarea name="message" placeholder="Scope of work or message" required></textarea>
-        <button type="submit">Submit</button>
-      </form>
-    </div>
-  </section>
+    <section id="gallery" class="gallery">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRT2tCQRATtOeIohk_X6SatarmuWRZV_hG7lg&s" alt="Service Image 1">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnZe-hchZqchklRY-zjmHQ6z2DQVi3DSaH2Q&s" alt="Service Image 2">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRS-ZiqDObhaQaGznGJoSymK73SjDVg6df9TQ&s" alt="Service Image 3">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHYANXBnmG7T1kTd56GP2Rb5pHYZfFPk9q1A&s" alt="Service Image 4">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRV2cWYC29ZEn7FLxafvnqqgfsZHwyQwJJV9Q&s" alt="Service Image 5">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQAB25nyzI2E7Ce1pDvqQI5XOq_h0aJLqAagQ&s" alt="Service Image 6">
+    </section>
 
-  <footer>
-    <p>&copy; 2025 Lee's & Things. All rights reserved.</p>
-    <p>Follow us on <a href="#">Facebook</a> | <a href="#">Instagram</a></p>
-  </footer>
-
-</body>
-</html>
+    <section id="contact-form" class="contact-form">
+        <h2>Contact Us Today</h2>
+        <form action="#" method="POST">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <input type="tel" name="phone" placeholder="Your Phone Number" required>
+            <textarea name="message" placeholder="Scope of work or message" required></textarea>
+            <button type="submit">Submit</button>
+        </form>
+    </section
